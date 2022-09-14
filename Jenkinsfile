@@ -31,7 +31,6 @@ pipeline{
                 }
             }
         }
-    }
         stage("Deploy Pro&Gra"){
             agent{
                 label "ansible"
