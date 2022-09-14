@@ -72,6 +72,6 @@
 
 - name: Check if prometheus is accessible
   uri:
-    url: 127.0.0.1:9090
+    url: prometheus:9090
     method: GET
     status_code: 200
