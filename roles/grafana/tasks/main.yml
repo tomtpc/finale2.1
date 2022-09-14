@@ -4,7 +4,7 @@
       - adduser 
       - libfontconfig1
     state: latest
-    update_cahe: true
+    update_cache: true
 
 - name: Download & Install grafana
   apt:
