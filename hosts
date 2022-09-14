@@ -1,0 +1,9 @@
+[prometheus]
+3.99.235.117 ansible_user=ubuntu ansible_python_interpreter='/usr/bin/env python3' ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+[node_exporter]
+35.182.248.32 ansible_user=ubuntu ansible_python_interpreter='/usr/bin/env python3' ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+35.182.252.68 ansible_user=ubuntu ansible_python_interpreter='/usr/bin/env python3' ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+[alertmanager]
+3.99.235.117 ansible_user=ubuntu ansible_python_interpreter='/usr/bin/env python3' ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+[grafana]
+3.99.235.117 ansible_user=ubuntu ansible_python_interpreter='/usr/bin/env python3' ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
