@@ -1,20 +1,14 @@
-- name: Add grafana key
-  apt_key: 
-    url: https://packages.grafana.com/gpg.key
-
-- name: Add Grafana Repo
-  apt_repo: repo='deb https://packages.grafana.com/enterprise/deb stable main' state=present
-
-- name: Update
+- name: Install adduser libfontconfig1
   apt:
-    name: "*"
+    name:
+      - adduser 
+      - libfontconfig1
     state: latest
     update_cahe: true
 
-- name: Install grafana
+- name: Download & Install grafana
   apt:
-    name: grafana-enterprise
-    state: latest
+    deb: https://dl.grafana.com/enterprise/release/grafana-enterprise_9.1.5_amd64.deb
 
 - name: "Grafana configuration file copy"
   template:
