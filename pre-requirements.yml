@@ -1,0 +1,31 @@
+---
+- host: prometheus
+  become: yes
+  become_user: root
+  become_method: sudo
+  tasks:
+    - name: Update all current packages
+      apt:
+        name: "*"
+        state: latest
+
+    - name: Install required system packages
+      apt:
+        pkg:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+          - python3-pip
+          - virtualenv
+          - python3-setuptools
+        state: latest
+        update_cache: true
+
+    - name: Remove useless packages from the cache
+      ansible.builtin.apt:
+        autoclean: yes
+
+    - name: Remove dependencies that are no longer required
+      ansible.builtin.apt:
+        autoremove: yes
